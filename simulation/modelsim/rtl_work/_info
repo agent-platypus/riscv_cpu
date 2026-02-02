@@ -1,0 +1,140 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/SchoolWork/RISCV_CPU/simulation/modelsim
+Ereg
+Z1 w1768914641
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z5 8D:/SchoolWork/RISCV_CPU/Reg.vhd
+Z6 FD:/SchoolWork/RISCV_CPU/Reg.vhd
+l0
+L5 1
+V=HJ[T3c<5DaMPEIP6o?1F3
+!s100 9=oHm84@MO?R2EFUS9ZbE0
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1769123114
+!i10b 1
+Z9 !s108 1769123114.000000
+Z10 !s90 -reportprogress|300|-work|work|D:/SchoolWork/RISCV_CPU/Reg.vhd|
+Z11 !s107 D:/SchoolWork/RISCV_CPU/Reg.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+R4
+DEx4 work 3 reg 0 22 =HJ[T3c<5DaMPEIP6o?1F3
+!i122 4
+l17
+L13 25
+VA5dB3O=e8I>AdPHW@m_jn2
+!s100 j@ZMb:TU0OAiCjJAVKzJR1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eregisterfile
+Z14 w1769121761
+Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R3
+R4
+!i122 5
+R0
+Z16 8D:/SchoolWork/RISCV_CPU/registerfile.vhd
+Z17 FD:/SchoolWork/RISCV_CPU/registerfile.vhd
+l0
+L5 1
+VY3fYLNh@I?Y0l>YK<GmRV2
+!s100 9zDj^8ZQ[YS??[GlYbP2j0
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|D:/SchoolWork/RISCV_CPU/registerfile.vhd|
+Z19 !s107 D:/SchoolWork/RISCV_CPU/registerfile.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R3
+R4
+DEx4 work 12 registerfile 0 22 Y3fYLNh@I?Y0l>YK<GmRV2
+!i122 5
+l36
+L18 52
+VEi;lW@8hIiIkzzjGl<N1=3
+!s100 kVn0CcWoX2aag==CEd_jR3
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Etb_registerfile
+Z20 w1769122909
+R15
+R3
+R4
+!i122 6
+R0
+Z21 8D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd
+Z22 FD:/SchoolWork/RISCV_CPU/tb_registerfile.vhd
+l0
+L5 1
+VS]1K2G6JR=C>HkaYOlbWN2
+!s100 @dTJ=>?ZCT8F=Z9bFSVYF2
+R7
+32
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-work|work|D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd|
+Z24 !s107 D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R3
+R4
+Z25 DEx4 work 15 tb_registerfile 0 22 S]1K2G6JR=C>HkaYOlbWN2
+!i122 6
+l30
+Z26 L8 495
+Z27 V@n[C8K5zh?SBSJAP>@jhj1
+Z28 !s100 >ho<bVR7=NJi[8_lk`_cI2
+R7
+32
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13

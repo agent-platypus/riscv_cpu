@@ -1,0 +1,61 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity hex_interface is
+	port( fourbit_input: in std_logic_vector(3 downto 0);
+			seg_display: out std_logic_vector(6 downto 0)
+		  );
+end hex_interface;
+
+architecture behavior of hex_interface is
+
+begin
+
+	hex_segment_mapping: for ii in 0 to 6 generate
+		HEX0[ii] <= seg_display(ii) ;
+	end generate;
+	
+	button_mapping: for ii in 0 to 3 generate
+		fourbit_input(ii) <= SW(ii);
+	end generate;
+	
+	display_hex: process(fourbit_input)
+		begin
+			case fourbit_input is
+				when x"0" => 
+					seg_display <= "1000000";
+				when x"1" => 
+					seg_display <= "1111001";
+				when x"2" => 
+					seg_display <= "0100100";
+				when x"3" => 
+					seg_display <= "0110000";
+				when x"4" => 
+					seg_display <= "0011001";
+				when x"5" => 
+					seg_display <= "0010010";
+				when x"6" => 
+					seg_display <= "0000010";
+				when x"7" => 
+					seg_display <= "1111000";
+				when x"8" => 
+					seg_display <= "0000000";
+				when x"9" => 
+					seg_display <= "0010000";
+				when x"a" => 
+					seg_display <= "0001000";
+				when x"b" => 
+					seg_display <= "0000011";
+				when x"c" => 
+					seg_display <= "0100111";
+				when x"d" => 
+					seg_display <= "0100001";
+				when x"e" => 
+					seg_display <= "0000110";
+				when x"f" => 
+					seg_display <= "0001110";
+			end case;
+			
+		end process display_hex;
+		
+end behavior;

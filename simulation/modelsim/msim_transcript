@@ -1,0 +1,212 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do RISCV_CPU_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/ModelSim/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/SchoolWork/RISCV_CPU/registerfile.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:23 on Jan 22,2026
+# vcom -reportprogress 300 -93 -work work D:/SchoolWork/RISCV_CPU/registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity registerfile
+# -- Compiling architecture Behavior of registerfile
+# End time: 15:02:23 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/SchoolWork/RISCV_CPU/Reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:23 on Jan 22,2026
+# vcom -reportprogress 300 -93 -work work D:/SchoolWork/RISCV_CPU/Reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity Reg
+# -- Compiling architecture Behavior of Reg
+# End time: 15:02:23 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/registerfile.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:03:13 on Jan 22,2026
+# vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity registerfile
+# -- Compiling architecture Behavior of registerfile
+# End time: 15:03:13 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:03:13 on Jan 22,2026
+# vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_registerfile
+# -- Compiling architecture behavior of tb_registerfile
+# ** Warning: D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd(22): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:03:13 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim -gui -l msim_transcript work.tb_registerfile -t 100ns
+# vsim -gui -l msim_transcript work.tb_registerfile -t 100ns 
+# Start time: 15:03:25 on Jan 22,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_registerfile(behavior)
+# Loading work.registerfile(behavior)
+# Loading ieee.std_logic_arith(body)
+# Loading work.reg(behavior)
+# ** Warning: (vsim-3479) Time unit 'ns' is less than the simulator resolution (100ns).
+#    Time: 0 ns  Iteration: 0  Root: /
+add wave sim:/tb_registerfile/DUT/*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb_registerfile/DUT
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 0 ns ###############
+#   Wakeup process: /tb_registerfile/line__45 @ sub-iteration 0
+#     Source: D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd:45
+#   1164Event process: /tb_registerfile/line__43 @ sub-iteration 0 to value HiX
+#     Source: D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd:43
+#   Wakeup process: /tb_registerfile/line__45 @ sub-iteration 1
+#     Source: D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd:45
+#   1164Event process: /tb_registerfile/line__43 @ sub-iteration 1 to value HiZ
+#     Source: D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd:43
+#   Wakeup process: /tb_registerfile/line__45 @ sub-iteration 2
+#     Source: D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd:45
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# ** Note: (vsim-3602) Delays were truncated during elaboration of the design.
+vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/Reg.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:14 on Jan 22,2026
+# vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/Reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity Reg
+# -- Compiling architecture Behavior of Reg
+# End time: 15:05:14 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/registerfile.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:14 on Jan 22,2026
+# vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity registerfile
+# -- Compiling architecture Behavior of registerfile
+# End time: 15:05:14 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:14 on Jan 22,2026
+# vcom -reportprogress 300 -work work D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_registerfile
+# -- Compiling architecture behavior of tb_registerfile
+# ** Warning: D:/SchoolWork/RISCV_CPU/tb_registerfile.vhd(22): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:05:14 on Jan 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim -gui -l msim_transcript -t ns work.registerfile work.tb_registerfile
+# End time: 15:05:27 on Jan 22,2026, Elapsed time: 0:02:02
+# Errors: 8, Warnings: 4
+# vsim -gui -l msim_transcript -t ns work.registerfile work.tb_registerfile 
+# Start time: 15:05:27 on Jan 22,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.registerfile(behavior)
+# Loading work.tb_registerfile(behavior)
+# Loading ieee.std_logic_arith(body)
+# Loading work.reg(behavior)
+# WARNING: No extended dataflow license exists
+add wave  \
+sim:/tb_registerfile/DUT/clk \
+sim:/tb_registerfile/DUT/Reg1 \
+sim:/tb_registerfile/DUT/Reg2 \
+sim:/tb_registerfile/DUT/DestReg \
+sim:/tb_registerfile/DUT/WrEn \
+sim:/tb_registerfile/DUT/WrData \
+sim:/tb_registerfile/DUT/Reset \
+sim:/tb_registerfile/DUT/Reg1Out \
+sim:/tb_registerfile/DUT/Reg2Out
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /registerfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 2  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 2  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /tb_registerfile/DUT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /tb_registerfile/DUT
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 17:29:44 on Jan 22,2026, Elapsed time: 2:24:17
+# Errors: 0, Warnings: 10

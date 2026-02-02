@@ -1,0 +1,41 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+
+entity sram_controller_test is
+port( address_lb: in std_logic_vector(7 downto 0); --SW16 -> SW9
+		wr_toggle: in std_logic; --SW17
+		clk: in std_logic;
+		data_input: in std_logic_vector(8 downto 0); --SW8 -> Sw0
+		incr_address_ub: in std_logic; -- pushbutton3
+		decr_address_ub: in std_logic; -- pushbutton2
+		
+		-- directly to SRAM chip
+		write_data: out std_logic_vector(15 downto 0); --LEDR15 -> LEDR0
+		curr_address: out std_logic_vector(19 downto 0); --HEX digits 
+		chip_enable: out std_logic;
+		output_enable: out std_logic;
+		write_enable: out std_logic;
+		upper_byte: out std_logic;
+		lower_byte: out std_logic
+);
+
+end entity;
+
+architecture behavior of sram_controller_test is
+	
+--	type state_type (
+--		IDLE,
+--		ASSERT_ADDRESS,
+--		
+--	);
+--	
+--signal state: state_type:= IDLE;
+ 
+begin 
+--	read_op: process(clk, wr_toggle)
+--	begin 
+--		
+
+
+end behavior;
